@@ -1,0 +1,27 @@
+<h1 class="text-center mb-4">Lista użytkowników:</h1>
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Imię i nazwisko</th>
+            <th>Email</th>
+            <th>Telefon</th>
+            <th>Adres</th>
+            <th>Adres 2</th>
+            <th>Firma</th>
+            <th>Strona WWW</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{name}} {{username}}</td>
+            <td>{{email}}</td>
+            <td>{{phone}}</td>
+            <td>{{address.street}} {{address.suite}}</td>
+            <td>{{address.zipcode}} {{address.city}}</td>
+            <td>{{company.name}} - <i>{{company.catchPharse}}</i> {{company.bs}}</td>
+            <td><a href="http://{{website}}" target="_blank" class="btn btn-primary btn-sm">{{website}}</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
